@@ -1,6 +1,51 @@
-<p>eventos works!</p>
+<div class="container-fluid">
+  <div class="titulo-evento">
+    <h3>Lista de Eventos</h3>
+    <a class="btn shadow">Novo +</a>
+  </div>
+  <hr>
 
-<div *ngFor="let evento of eventos">
-  <p>Tema: <span>{{evento.tema}}</span></p>
-  <p>Local: <span>{{evento.local}}</span></p>
+  <div class="barra-pesquisa">
+      <div class="pesquisa">
+          <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="listaEvento"
+        />
+        <!-- <button type="button">
+          <i class="fa fa-search"></i>
+        </button> -->
+      </div>
+  </div>
+
+  <h4>Filtro: {{listaEvento}}</h4>
+
+  <div class="alert alert-success" *ngIf="eventos.length == 0" >
+    Nenhum evento encontrado!
+  </div>
+
+  <button (click)="toggleImage()" class="btn btn-outline-danger mb-2">
+    {{!mostrarImagens ? "Exibir Imagens" : "Ocultar Imagens"}}
+  </button>
+
+  <div class="card-list">
+    <div class="card shadow p-4 mb-4 bg-white" *ngFor="let evento of eventos">
+      <div class="card-body" >
+        <img class="card-img-top"
+          alt="Não encontrada"
+          [collapse]="!mostrarImagens"
+          src={{evento.imageUrl}}
+          [isAnimated]="true" style="max-height: 200px;" />
+
+          <u class="card-text evento">
+            <li><strong>Local: </strong> {{evento.local}}</li>
+            <li><strong>Tema: </strong> {{evento.tema}}</li>
+            <li><strong>Data: </strong> {{evento.data}}</li>
+            <li><strong>Qtd. Pessoas: </strong> {{evento.qtdePessoas}}</li>
+            <li><strong>Lote: </strong> {{evento.lote}}</li>
+          </u>
+      </div>
+    </div>
+  </div>
+
 </div>

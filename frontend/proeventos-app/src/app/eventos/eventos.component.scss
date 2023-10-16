@@ -1,0 +1,65 @@
+.titulo-evento {
+  display: flex;
+  margin-top: 8px;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.titulo-evento > a {
+  background-color: #40BEAE;
+  color: white;
+  width: 90px;
+  padding: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 8px;
+  border-color: #40BEAE;;
+}
+
+.barra-pesquisa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pesquisa {
+  display: flex;
+  background-color: #C4C4C4;
+  padding: 8px;
+  border-radius: 13px;
+}
+
+.pesquisa input {
+  background-color: #C4C4C4;
+  border: none;
+}
+
+.pesquisa button {
+  background-color: #C4C4C4;
+  border-color: #ccc;
+  color: white;
+  font-size: 24px;
+}
+
+.card-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.card {
+  margin: 8px;
+  border: none;
+  width: 300px;
+}
+
+.evento {
+  list-style: none;
+  text-decoration: none;
+}
+
+.evento li {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}

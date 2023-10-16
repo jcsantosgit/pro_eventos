@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-eventos',
@@ -8,12 +8,18 @@ import { Component } from '@angular/core';
 })
 export class EventosComponent {
 
-  public eventos: any;
+  public eventos: any = [];
+  mostrarImagens: boolean = true;
+  @Input() listaEvento: string = ''
 
   constructor(private service: HttpClient){}
 
   ngOnInit(): void {
     this.getEventos();
+  }
+
+  public toggleImage() {
+    this.mostrarImagens = !this.mostrarImagens;
   }
 
   public getEventos(): void {
