@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class MenuVerticalComponent {
 
+  isVisible: boolean = false;
+
+  ngOnInit(): void {
+    this.isVisible = false;
+  }
+
+  public menuShow(){
+    this.isVisible = !this.isVisible;
+  }
 }

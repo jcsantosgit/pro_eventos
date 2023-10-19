@@ -24,14 +24,18 @@
 
 .pesquisa {
   display: flex;
-  background-color: #C4C4C4;
+  background-color: white;
   padding: 8px;
   border-radius: 13px;
+  border: thin solid #40BEAE;
+  width: 300px;
+  box-sizing: border-box;
 }
 
 .pesquisa input {
-  background-color: #C4C4C4;
+  background-color: white;
   border: none;
+  text-align: center;
 }
 
 .pesquisa button {

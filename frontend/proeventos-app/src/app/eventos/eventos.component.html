@@ -1,42 +1,47 @@
-<div class="container-fluid">
-  <div class="titulo-evento">
-    <h3>Lista de Eventos</h3>
-    <a class="btn shadow">Novo +</a>
+<div class="eventos container-fluid">
+  <div class="page-header">
+    
+    <div class="titulo-evento">
+      <h3>Lista de Eventos</h3>
+      <a class="btn shadow">Novo +</a>
+    </div>
+    
+    <hr>
+  
+    <div class="barra-pesquisa">
+        <div class="pesquisa">
+            <input
+            type="text"
+            class="form-control"
+            placeholder="pesquisar.."
+            [(ngModel)]="pesquisar"
+          />
+          <!-- <button type="button">
+            <i class="fa fa-search"></i>
+          </button> -->
+        </div>
+    </div>  
   </div>
-  <hr>
-
-  <div class="barra-pesquisa">
-      <div class="pesquisa">
-          <input
-          type="text"
-          class="form-control"
-          [(ngModel)]="listaEvento"
-        />
-        <!-- <button type="button">
-          <i class="fa fa-search"></i>
-        </button> -->
-      </div>
-  </div>
-
-  <h4>Filtro: {{listaEvento}}</h4>
-
+  
   <div class="alert alert-success" *ngIf="eventos.length == 0" >
     Nenhum evento encontrado!
   </div>
-
-  <button (click)="toggleImage()" class="btn btn-outline-danger mb-2">
-    {{!mostrarImagens ? "Exibir Imagens" : "Ocultar Imagens"}}
+  
+  <button (click)="toggleImage()" class="btn btn-link mb-2">
+    <i *ngIf="mostrarImagens == true" class="fa fa-eye"></i>
+    <i *ngIf="mostrarImagens == false" class="fa fa-eye-slash"></i>
+    {{!mostrarImagens ? "exibir imagens" : "ocultar imagens"}}
   </button>
-
+  
   <div class="card-list">
-    <div class="card shadow p-4 mb-4 bg-white" *ngFor="let evento of eventos">
+    <div class="card shadow p-4 mb-4 bg-white" *ngFor="let evento of eventosFiltrados">
       <div class="card-body" >
         <img class="card-img-top"
           alt="Não encontrada"
           [collapse]="!mostrarImagens"
           src={{evento.imageUrl}}
           [isAnimated]="true" style="max-height: 200px;" />
-
+  
           <u class="card-text evento">
             <li><strong>Local: </strong> {{evento.local}}</li>
             <li><strong>Tema: </strong> {{evento.tema}}</li>
@@ -47,5 +52,4 @@
       </div>
     </div>
   </div>
-
 </div>
