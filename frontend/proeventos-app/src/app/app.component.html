@@ -1,14 +1,47 @@
-<app-menu-vertical></app-menu-vertical>
-<app-navbar></app-navbar>
-<div style="margin-left: 172px;">
-  <app-eventos></app-eventos>
-</div>
+<header class="evento-header">
 
-<!-- 
-<div class="row">
-  <div class="col-sm-4 col-md-2 col-lg-2">
+  <div class="evento-logo">
+    <img src="../assets/logo.png" alt="logo eventos">
   </div>
-  <div class="col-sm-8 col-md-10 col-lg-10">
+
+  <div class="evento-navbar">
+
+    <button class="humburger">
+      <i class="fa fa-bars"></i>
+    </button>
+
+    <div class="btn-group" dropdown>
+      
+      <button id="button-basic" dropdownToggle type="button" class="btn btn-default dropdown-toggle" aria-controls="dropdown-basic">
+        <img class="foto-perfil" src="../assets/me.png" alt="perfil">
+        <span class="caret"></span>
+      </button>
+
+      <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+          role="menu" aria-labelledby="button-basic">
+        <li role="menuitem"><a class="dropdown-item" href="#"></a>
+        </li>
+        <li role="menuitem">
+          <a class="dropdown-item" href="#">Configuração <i class="fa fa-gear"></i></a>
+        </li>
+        <li role="menuitem">
+          <a class="dropdown-item" href="#">
+            Sair <i class="fa fa-sign-out"></i>
+          </a>
+        </li>
+      </ul>
+    </div> <!-- Dropdown Menu -->
+
   </div>
-</div> -->
+</header>
+
+<main class="evento-body">
+  <nav class="evento-menu">
+    
+  </nav>
+  <div class="evento-content">
+    <app-eventos-create></app-eventos-create>
+    <!-- <app-eventos></app-eventos> -->
+  </div>
+</main>
 <router-outlet></router-outlet>

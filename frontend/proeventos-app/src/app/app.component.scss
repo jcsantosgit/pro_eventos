@@ -1,1 +1,75 @@
+/* BODY */
+.evento-body {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
 
+
+.evento-menu {
+    background: #40BEAE;
+    width: 300px;
+    height: auto;
+}
+
+.evento-content {
+    background: #f1f1f1;
+    flex-grow: 2;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+/* HEADER */
+
+.evento-header {
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    box-sizing: border-box;
+    background: yellow;
+}
+
+.evento-navbar {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    background: white;;
+    flex-grow: 2;
+    justify-content: flex-end;
+}
+
+.evento-navbar button {
+    border: none;
+    background-color: #fff;
+}
+
+.evento-logo {
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    background: #f1f1f1;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.evento-logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.foto-perfil {
+    height: 50px;
+    width: 50px;
+  }
+
+
+
+  #dropdown-basic {
+    transform: translateX(-75px) !important;
+  }
+
+  #dropdown-basic li {
+    text-align: end;
+  }

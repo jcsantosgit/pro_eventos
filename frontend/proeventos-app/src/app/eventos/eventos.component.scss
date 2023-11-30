@@ -1,3 +1,9 @@
+textarea:focus, input:focus, select:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
 .titulo-evento {
   display: flex;
   margin-top: 8px;
@@ -27,8 +33,8 @@
   background-color: white;
   padding: 8px;
   border-radius: 13px;
-  border: thin solid #40BEAE;
-  width: 300px;
+  border: thin solid #ccc;
+  width: 400px;
   box-sizing: border-box;
 }
 

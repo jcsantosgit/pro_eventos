@@ -12,14 +12,18 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 // Components
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EventosComponent } from './eventos/eventos.component';
 import { NavBar } from './app-navbar';
 import { MenuVerticalComponent } from './menu-vertical/menu-vertical.component';
+
+// Meus Componentes
+import { EventosComponent } from './eventos/eventos.component';
+import { EventosCreate } from './eventos/create/eventos.component-create';
 
 @NgModule({
   declarations: [
     AppComponent,
     EventosComponent,
+    EventosCreate,
     NavBar,
     MenuVerticalComponent
   ],

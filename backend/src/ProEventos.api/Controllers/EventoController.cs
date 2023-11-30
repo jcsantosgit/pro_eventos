@@ -17,15 +17,30 @@ public class EventoController : ControllerBase
     }
 
     [HttpGet]
-    public IEnumerable<Evento> get()
+    public IActionResult Get()
     {
-        return _dbContext.Eventos;
+        try
+        {
+            return Ok(_dbContext.Eventos);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
     }
 
     [HttpGet("{id}")]
-    public Evento GetById(long id)
+    public IActionResult GetById(long id)
     {
-        return _dbContext.Eventos.FirstOrDefault(evento=>evento.Id == id);
+        try
+        {
+            var query = _dbContext.Eventos.FirstOrDefault(evento=>evento.Id == id);
+            return Ok(query);            
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
     }
 
     [HttpPost]

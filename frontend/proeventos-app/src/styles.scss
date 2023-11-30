@@ -3,5 +3,12 @@
 @import '../node_modules/ngx-bootstrap/datepicker/bs-datepicker.css';
 
 body {
-  background-color: #f1f1f1;
+  background-color: yellow;
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+
+div[ng-view]{
+  height: 100%;
 }
