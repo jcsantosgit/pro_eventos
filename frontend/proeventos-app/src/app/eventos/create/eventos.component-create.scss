@@ -1,3 +1,18 @@
+#imgLogo {
+  background-image: url('../../../assets/image-icon.png');
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  height: 300px;
+  width: 300px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+#imgLogo img {
+  height: 300px;
+  width: 300px;
+}
+
 .evento-create {
     display: flex;
     flex-direction: column;
@@ -7,7 +22,7 @@
 }
 
 .evento-create-main {
-    width: 1024px;
+    width: 700px;
 }
 
 .form-main-1 {

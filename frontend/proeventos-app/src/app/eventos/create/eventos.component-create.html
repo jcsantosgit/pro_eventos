@@ -5,33 +5,43 @@
 
         <h3>Cadastro do Evento</h3>
         <hr>
-    
+
         <div class="form-main-1">
 
             <div class="form-1">
                 <!-- Foto do Evento -->
-                <img src="../../../assets/foto-1.jpeg" alt="teste">
-                <button class="btn btn-warning btn-upload">Upload</button>            
+                <div id="imgLogo">
+                  <img  [src]="foto" alt="logo do evento">
+                </div>
+                <label class="btn btn-warning btn-upload" >
+                  Selecionar Imagem
+                  <input
+                  id="imgUrl"
+                  type="file"
+                  style="display: none;"
+                  (change)="onChange($event)"
+                  />
+                </label>
             </div>
-    
+
             <div class="form-2">
                 <!-- Campos do formulário -->
-                
+
                 <div class="form-group">
                     <label class="form-label">Tema</label>
                     <input type="text" class="form-control" />
                 </div>
-            
+
                 <div class="form-group">
                     <label class="form-label">Local</label>
                     <input type="text" class="form-control" />
-                </div>    
-            
+                </div>
+
                 <div class="form-group">
                     <label class="form-label">Data</label>
                     <input type="text" class="form-control" />
                 </div>
-                
+
                 <div class="form-group">
                     <label class="form-label">E-mail</label>
                     <input type="text" class="form-control" />
@@ -40,12 +50,13 @@
                 <div class="form-group">
                     <label class="form-label">Valor</label>
                     <input type="text" class="form-control" />
-                </div>            
+                </div>
             </div>
         </div>
 
-        <div>
-            <textarea rows="10" class="form-control"></textarea>    
+        <div class="form-group">
+            <label>Conteúdo Programatico</label>
+            <textarea rows="10" class="form-control" placeholder="Separar itens usando o caractere #, por exemplo:  1 - Introdução ao Java # 2 - Orientação a Objetos no Java # 3 - Conexão de Banco de Dados no Java" ></textarea>
         </div>
 
         <!--Barra de pesquisa -->
@@ -68,13 +79,13 @@
                     <span>Desenvolvedor Full Stack</span>
                 </p>
                 <button class="btn btn-link">Adicionar</button>
-            </div>                            
-        </div>  
+            </div>
+        </div>
 
 
         <h6>Já cadastrados:</h6>
         <div class="list-palestrnates">
- 
+
         </div>
 
     </div>
